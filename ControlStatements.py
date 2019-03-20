@@ -202,7 +202,7 @@ labels = ["F", "J", "A", "Q", "Y", "B", "W", "X"]
 points = []
 # write your for loop here
 for label, x, y, z in zip(labels, x_coord, y_coord, z_coord):
-    format_label = "{}: {}, {}, {}".format(label,x,y,z)
+    format_label = "{}: {}, {}, {}".format(label, x, y, z)
     points.append(format_label)
 
 for point in points:
@@ -251,8 +251,8 @@ heights = [72, 68, 72, 66, 76]
 
 updated_cast = []
 # write your for loop here
-for i, (actor, height) in enumerate(zip(cast,heights)): # note use of zip
-    cast[cast.index(actor)] = "{} {}".format(actor,height)
+for i, (actor, height) in enumerate(zip(cast, heights)):  # note use of zip
+    cast[cast.index(actor)] = "{} {}".format(actor, height)
 
 print(cast)
 
@@ -267,12 +267,12 @@ print(first_names)
 ################
 
 scores = {
-             "Rick Sanchez": 70,
-             "Morty Smith": 35,
-             "Summer Smith": 82,
-             "Jerry Smith": 23,
-             "Beth Smith": 98
-          }
+    "Rick Sanchez": 70,
+    "Morty Smith": 35,
+    "Summer Smith": 82,
+    "Jerry Smith": 23,
+    "Beth Smith": 98
+}
 
 passed = [score for score in scores if scores.get(score) > 65]
 print(passed)
@@ -398,7 +398,6 @@ for year, nominated_directors in nominated.items():
             nom_count_dict[nominated_director] = 1
         else:
             nom_count_dict[nominated_director] += 1
-
 
 print("nom_count_dict = {}\n".format(nom_count_dict))
 
