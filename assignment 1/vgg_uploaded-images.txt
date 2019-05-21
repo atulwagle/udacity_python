@@ -1,0 +1,84 @@
+Command Line Arguments:
+     dir = uploaded_images/ 
+    arch = vgg 
+ dogfile = dognames.txt
+
+Prints 10 filenames from folder pet_images/
+ 1 file:         Polar_bear_01.jpg
+ 2 file:         Coffee_Mug_01.jpg
+ 3 file:                Dog_01.jpg
+ 4 file:                Dog_02.jpg
+
+Pet Image Label Dictionary has 4 key-value pairs.
+Below are 4 of them:
+ 1 key:              Polar_bear_01.jpg  label:                 polar bear
+ 2 key:              Coffee_Mug_01.jpg  label:                 coffee mug
+ 3 key:                     Dog_01.jpg  label:                        dog
+ 4 key:                     Dog_02.jpg  label:                        dog
+
+     MATCH:
+
+             Polar_bear_01.jpg: 
+Real:                 polar bear   Classifier: ice bear,polar bear,ursus maritimus,thalarctos maritimus
+
+             Coffee_Mug_01.jpg: 
+Real:                 coffee mug   Classifier:                     coffee mug
+
+ NOT A MATCH:
+
+                    Dog_01.jpg: 
+Real:                        dog   Classifier:                         beagle
+
+                    Dog_02.jpg: 
+Real:                        dog   Classifier:                    paper towel
+
+# Total Images 4 # Matches: 2 # NOT Matches: 2
+
+     MATCH:
+
+             Polar_bear_01.jpg: 
+Real:                 polar bear   Classifier: ice bear,polar bear,ursus maritimus,thalarctos maritimus  
+PetLabelDog: 0  ClassLabelDog: 0
+
+             Coffee_Mug_01.jpg: 
+Real:                 coffee mug   Classifier:                     coffee mug  
+PetLabelDog: 0  ClassLabelDog: 0
+
+ NOT A MATCH:
+
+                    Dog_01.jpg: 
+Real:                        dog   Classifier:                         beagle  
+PetLabelDog: 1  ClassLabelDog: 1
+
+                    Dog_02.jpg: 
+Real:                        dog   Classifier:                    paper towel  
+PetLabelDog: 1  ClassLabelDog: 0
+
+# Total Images 4 # Matches: 2 # NOT Matches: 2
+
+ ** Statistics from calculates_results_stats() function:
+N Images:  4  N Dog Images:  2  N NotDog Images:  2 
+Pct Corr dog:  50.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:   0.0
+
+ ** Check Statistics - calculated from this function as a check:
+N Images:  4  N Dog Images:  2  N NotDog Images:  2 
+Pct Corr dog:  50.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:   0.0
+
+
+*** Results Summary for CNN Model Architecture VGG ***
+N Images            :   4
+N Dog Images        :   2
+N Not-Dog Images    :   2
+ 
+pct_match 50.00
+pct_correct_dogs 50.00
+pct_correct_breed 0.00
+pct_correct_notdogs 100.00
+
+INCORRECT Dog/NOT Dog Assignments:
+Pet Label: dog
+
+INCORRECT Dog Breed Assignment:
+Real:                        dog   Classifier:                         beagle
+
+** Total Elapsed Runtime: 0:0:6
